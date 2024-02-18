@@ -26,9 +26,9 @@ const Summer = ({ toggleSummer }) => {
                     <img src="../../assets/search.svg" className="w-[20px] h-[20px] " />
                 </div>
             </div>
-            {/* <div className="scrollbar overflow-scroll h-[calc(100vh-200px)]" onClick={() => toggleSummer()}>
+            <div className="scrollbar overflow-scroll h-[calc(100vh-200px)]" onClick={() => toggleSummer()}>
                 {endpoint === 'juzs' ? <Juzs style={'small-screen'} /> : endpoint === 'chapters' ? <Chapters style={'small-screen'} /> : <Pages style={'small-screen'} />}
-            </div> */}
+            </div>
 
         </main>
     )
