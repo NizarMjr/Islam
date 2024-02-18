@@ -84,3 +84,11 @@ select:focus {
 input::placeholder {
   font-weight: bold;
 }
+
+.play-surah {
+  transition: .5s;
+}
+
+.hide {
+  bottom: -500px !important;
+}

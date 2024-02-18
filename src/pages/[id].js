@@ -27,13 +27,14 @@ const Detail = () => {
         className.classList.contains('hidden') ? className.classList.remove('hidden') : className.classList.add('hidden')
     }
     return (
-        <main className="bg-[#eee] h-auto">
+        <main className="bg-[#eee] h-auto mb-8">
             <Navbar />
             <Summer toggleSummer={toggleSummer} />
             <main className="md:w-[calc(100%-400px)] h-full md:absolute top-24 rounded left-96 bg-[#eee] flex flex-col items-center justify-center h-screen">
                 <Reciters />
                 <SurahName id={info.ID} />
                 <div className="rtl p-2 h-full scrollbar overflow-scroll w-full">
+                    <img src="../../assets/Basmala.svg.png" className="w-[200px] mx-auto my-[1rem]" />
                     {surah?.map((sur) => {
                         return (
                             <div key={sur.id} className="bg-white my-4 rounded h-auto flex items-center justify-between font-400 quranic-text p-2">
@@ -46,7 +47,6 @@ const Detail = () => {
                     })}
                 </div>
             </main>
-
         </main>
     )
 }

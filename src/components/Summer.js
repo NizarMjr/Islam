@@ -14,7 +14,7 @@ const Summer = ({ toggleSummer }) => {
         dispatch(setEndpoint(endp))
     }
     return (
-        <main className={`summer transition md:fixed md:block hidden py-4 px-2 md:w-[300px] top-24 md:left-12 bg-[#eee] rounded-lg`}>
+        <main className={`summer transition md:fixed md:block max-md:hidden py-4 px-2 md:w-[300px] h-fit-content overflow-hidden top-24 md:left-12 bg-[#eee] rounded-lg`}>
             <div className="bg-white p-2 flex justify-between items-center text-[#5a676f] text-[1.1rem] mb-4 rounded border border-[#d9edeb]">
                 <span className="btn btn1 font-bold active cursor-pointer p-2 rounded text-[12px]" onClick={() => activeBtn('btn1', 'chapters')}>السورة</span>
                 <span className="btn btn2 font-bold cursor-pointer p-2 rounded text-[12px]" onClick={() => activeBtn('btn2', 'juzs')}>الجزء</span>
@@ -29,7 +29,6 @@ const Summer = ({ toggleSummer }) => {
             <div className="scrollbar overflow-scroll h-[calc(100vh-200px)]" onClick={() => toggleSummer()}>
                 {endpoint === 'juzs' ? <Juzs style={'small-screen'} /> : endpoint === 'chapters' ? <Chapters style={'small-screen'} /> : <Pages style={'small-screen'} />}
             </div>
-
         </main>
     )
 }

@@ -17,7 +17,7 @@ const Surah = ({ info }) => {
     }, [info])
 
     return (
-        <main className="bg-white p-2 rounded border-[1px] mt-4">
+        <main className="bg-white p-2 rounded border-[1px] mb-4">
             <Link href={`/${surah.id}`} onClick={() => dispatch(getSurah({ 'ID': surah.id, 'juz': info.juz, 'page': '' }))}>
                 <div className="hover:border-[#3498db] cursor-pointer p-2 flex justify-between items-center">
                     <span className="bg-[#f4f5f6] w-8 h-8 flex items-center justify-center rotate-45"><span className="-rotate-45 text-[#028478] font-bold">{surah.id}</span></span>
