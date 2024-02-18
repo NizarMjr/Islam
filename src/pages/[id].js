@@ -46,7 +46,7 @@ const Detail = () => {
                     })}
                 </div>
             </main>
-            <Footer />
+
         </main>
     )
 }
