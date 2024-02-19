@@ -16,12 +16,8 @@ const Content = () => {
     }
     return (
         <main>
-            <p className="text-center my-16 p-8 text-xl leading-[2] text-[#028478] bg-[#d9edeb] h-auto">
-                مرحبًا بك في واجهة صفحتنا المميزة لقراءة القرآن الكريم والاستماع للآيات الشريفة! تمتع بتجربة مميزة من خلال قراءة نصوص القرآن والاستماع لها بأصوات مختلفة من أشهر القراء المشهورين عالميًا.
-                في هذه الصفحة، يمكنك اختيار القارئ المفضل لديك والتفاعل مع القرآن بطريقة جديدة ومبتكرة،
-            </p>
             <main className="container">
-                <div className="flex sm:flex-row flex-col items-center justify-between mb-8">
+                <div className="flex sm:flex-row flex-col items-center justify-between my-8">
                     <h2 className="sm:mb-0 mb-8 font-bold text-3xl h-full quranic-text">القرآن الكريم</h2>
                     <div className="p-2 flex justify-between items-center text-[#5a676f] text-[1.1rem] mb-4 rounded border border-[#d9edeb]">
                         <span className="btn btn1 font-bold active cursor-pointer p-2 rounded text-[12px]" onClick={() => activeBtn('btn1', 'chapters')}>السورة</span>

@@ -56,13 +56,13 @@ const SurahName = ({ id }) => {
                     </div>
                 </div>
             </div>
-            <div className="play-surah hide flex items-center justify-between fixed bottom-0 left-0 w-full">
-                <IoIosCloseCircle className="text-2xl cursor-pointer" onClick={() => stopPlayingSurah()} />
+            <div className="play-surah hide fixed bottom-0 left-0 w-full">
                 {mp3 && <audio ref={audioRef}
                     src={mp3}
                     controls={play}
                     className="mx-auto w-full"
                 />}
+                <IoIosCloseCircle className="absolute bottom-0 left-1/2 text-2xl cursor-pointer" onClick={() => stopPlayingSurah()} />
             </div>
         </div>
     )

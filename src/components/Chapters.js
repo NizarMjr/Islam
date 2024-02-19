@@ -3,6 +3,7 @@ import Surah from "./Surah";
 
 const Chapters = ({ style }) => {
     const [chapters, setChapters] = useState([]);
+    const [show, setShow] = useState(false);
 
     useEffect(() => {
         const fetchChapters = async () => {
@@ -11,14 +12,27 @@ const Chapters = ({ style }) => {
             setChapters(result.chapters);
         }
         fetchChapters();
-    }, [])
+    }, [chapters])
 
     return (
-        <main className={`${style} gap-4 max-w-full`}>
-            {chapters?.map((ch, index) => {
-                return <Surah info={{ 'ID': index + 1, 'juz': '' }} key={index} />
-            })}
+        <main>
+            <main className={`${style} gap-4 max-w-full`}>
+                {show ?
+                    chapters?.map((ch, index) => {
+                        return <>
+                            <Surah info={{ 'ID': index + 1, 'juz': '' }} key={index} show={show} setShow={setShow} />
+                        </>
+                    }) : chapters.slice(0, 10)?.map((ch, index) => {
+                        return <>
+                            <Surah info={{ 'ID': index + 1, 'juz': '' }} key={index} show={show} setShow={setShow} />
+                        </>
+                    })
+                }
+            </main>
+            {!show && <button className="block mx-auto my-8 rounded bg-[#028478] p-2 text-[#d9edeb] font-bold w-[150px]" onClick={() => setShow(true)}>عرض المزيد </button>
+            }
         </main>
+
     )
 }
 export default Chapters;

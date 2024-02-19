@@ -87,8 +87,20 @@ input::placeholder {
 
 .play-surah {
   transition: .5s;
+  background-color: #d9edeb;
 }
 
 .hide {
   bottom: -500px !important;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-panel {
+  background-color: transparent;
+  width: 100%;
+}
+
+audio::-webkit-media-controls-enclosure {
+  background-color: transparent;
+  color: #028478;
 }
