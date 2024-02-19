@@ -20,11 +20,11 @@ const Chapters = ({ style }) => {
                 {show ?
                     chapters?.map((ch, index) => {
                         return <>
-                            <Surah info={{ 'ID': index + 1, 'juz': '' }} key={index} show={show} setShow={setShow} />
+                            <Surah info={{ 'ID': index + 1, 'juz': '' }} key={index} />
                         </>
                     }) : chapters.slice(0, 10)?.map((ch, index) => {
                         return <>
-                            <Surah info={{ 'ID': index + 1, 'juz': '' }} key={index} show={show} setShow={setShow} />
+                            <Surah info={{ 'ID': index + 1, 'juz': '' }} key={index} />
                         </>
                     })
                 }
